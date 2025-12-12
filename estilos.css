@@ -1,3 +1,6 @@
+/* ============================= */
+/* RESET GENERAL */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,77 +13,108 @@ body {
   background: #0d0d0d;
 }
 
-/* ----------------------------- */
+/* ============================= */
 /* LOGO + ANIMACIÓN */
+/* ============================= */
 .logo img {
-  width: 60px;
+  width: 55px;
   height: auto;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo img:hover {
-  transform: scale(1.2) rotate(10deg);
-  box-shadow: 0 5px 15px rgba(0, 213, 255, 0.5);
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 5px 15px rgba(0, 213, 255, 0.55);
 }
 
-/* ----------------------------- */
-/* CABECERA */
+/* ============================= */
+/* HEADER ARREGLADO */
+/* ============================= */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(20, 20, 20, 0.9);
+  background: rgba(20, 20, 20, 0.92);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 12px 35px;
   border-bottom: 2px solid #ff006a;
-  z-index: 100;
+  z-index: 1000;
 }
 
-.header .menu ul {
+.menu ul {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 22px;
 }
 
-.header .menu ul li {
+.menu ul li {
   list-style: none;
 }
 
-.header .menu ul li a {
+.menu ul li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
   letter-spacing: 1px;
   transition: 0.3s;
-
-  /* MARCO ALREDEDOR */
-  padding: 6px 12px;
+  padding: 7px 14px;
   border: 2px solid #ff006a;
   border-radius: 8px;
 }
 
-.header .menu ul li a:hover {
+.menu ul li a:hover {
   color: #00eaff;
   border-color: #00eaff;
-  background: rgba(0, 234, 255, 0.15);
+  background: rgba(0, 234, 255, 0.18);
 }
 
+/* ----------------------------- */
 /* RESPONSIVE HEADER */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-  }
-  .header .menu ul {
-    flex-direction: column;
+/* ----------------------------- */
+@media (max-width: 900px) {
+  .menu ul {
     gap: 12px;
   }
 }
 
-/* ----------------------------- */
-/* HERO */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu ul li a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -93,11 +127,11 @@ body {
   gap: 20px;
 }
 
-.hero .hero-content {
+.hero-content {
   animation: fadeIn 1.2s ease-out;
 }
 
-.hero .hero-content .title {
+.title {
   font-size: 3.5rem;
   background: linear-gradient(90deg, #ff006a, #00eaff);
   -webkit-background-clip: text;
@@ -105,13 +139,13 @@ body {
   margin-bottom: 20px;
 }
 
-.hero .hero-content .subtitle {
+.subtitle {
   font-size: 1.4rem;
   color: #66f3ff;
   margin-bottom: 30px;
 }
 
-.hero .hero-content .btn-hero {
+.btn-hero {
   display: inline-block;
   padding: 15px 40px;
   font-size: 1.1rem;
@@ -124,13 +158,14 @@ body {
   transition: 0.3s ease;
 }
 
-.hero .hero-content .btn-hero:hover {
+.btn-hero:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 10px 20px rgba(255, 0, 106, 0.4);
 }
 
-/* ----------------------------- */
-/* HERO IMAGEN + ANIMACIÓN AL HACER HOVER */
+/* ============================= */
+/* HERO IMAGEN */
+/* ============================= */
 .hero-img {
   background-size: cover;
   background-position: center;
@@ -146,21 +181,24 @@ body {
   box-shadow: 0 15px 30px rgba(0, 234, 255, 0.5);
 }
 
+/* ============================= */
 /* RESPONSIVE HERO */
+/* ============================= */
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  
-  .hero .hero-img {
+
+  .hero-img {
     height: 260px;
     margin-top: 20px;
   }
 }
 
-/* ----------------------------- */
-/* ANIMACIONES DE ENTRADA */
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -181,4 +219,29 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+.footer-index {
+    background: rgba(20, 20, 20, 0.9);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #ff006a;
+    color: #d7d7ff;
+    margin-top: 30px;
+}
+
+.footer-index p {
+    margin-bottom: 10px;
+}
+
+.footer-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-contacto i {
+    color: #00eaff;
+    margin-right: 8px;
 }

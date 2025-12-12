@@ -105,3 +105,29 @@ body {
     border: 1px solid #ff3ebf;
     box-shadow: 0 0 10px rgba(255, 0, 150, 0.4);
 }
+
+.footer-cursos {
+    background: rgba(20, 20, 20, 0.9);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #ff006a;
+    color: #d7d7ff;
+    margin-top: 30px;
+}
+
+.footer-cursos p {
+    margin-bottom: 10px;
+}
+
+.footer-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-contacto i {
+    color: #00eaff;
+    margin-right: 8px;
+}

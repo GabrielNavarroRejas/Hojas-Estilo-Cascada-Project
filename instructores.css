@@ -1,0 +1,92 @@
+/* Fondo oscuro global igual al index */
+body {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    background: #0d0d0d;
+    margin-top: 110px; /* para que no se esconda detrás del header fijo */
+}
+
+/* Sección título */
+.title-section {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.title-section h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff006a, #00eaff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.title-section p {
+    color: #66f3ff;
+    font-size: 1.2rem;
+}
+
+
+/* Imagen circular */
+.perfil-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00eaff;
+    transition: 0.3s ease;
+}
+
+/* Tarjeta instructor estilo neón */
+.instructor-card {
+    background: #141414;
+    border-radius: 12px;
+    border: 2px solid #ff006a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instructor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 234, 255, 0.3);
+    border-color: #00eaff;
+}
+
+.instructor-card:hover .perfil-img {
+    transform: scale(1.1);
+    border-color: #ff006a;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .perfil-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+.instructor-card .text-muted {
+    color: #ff006a !important;
+}
+.footer-instructores {
+    background: rgba(20, 20, 20, 0.9);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #ff006a;
+    color: #d7d7ff;
+    margin-top: 30px;
+}
+
+.footer-instructores p {
+    margin-bottom: 10px;
+}
+
+.footer-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-contacto i {
+    color: #00eaff;
+    margin-right: 8px;
+}

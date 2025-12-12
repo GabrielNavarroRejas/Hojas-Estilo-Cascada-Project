@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - AulaNova Learning Center</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="eventos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3145/3145765.png" alt="Logo Cuaderno">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="eventos.html" class="active">Eventos</a></li>
+                <li><a href="instructores.html">Instructores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL DE EVENTOS -->
+    <main class="eventos-container">
+        <!-- ENCABEZADO DE EVENTOS -->
+        <header class="header-eventos">
+            <h1 class="titulo-eventos">Eventos y Talleres</h1>
+            <p class="subtitulo-eventos">Participa en nuestras charlas, talleres y eventos especiales para ampliar tus conocimientos</p>
+            <div class="filtros">
+                <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+                <button class="btn-filtro" data-filtro="charla">Charlas</button>
+                <button class="btn-filtro" data-filtro="taller">Talleres</button>
+                <button class="btn-filtro" data-filtro="webinar">Webinars</button>
+            </div>
+        </header>
+
+        <!-- CONTENEDOR DE EVENTOS EN GRID -->
+        <section class="contenedor-eventos">
+            <!-- Evento 1 -->
+            <div class="card-evento" data-categoria="charla">
+                <div class="evento-imagen">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Charla de IA">
+                    <span class="evento-categoria">Charla</span>
+                    <div class="evento-fecha">
+                        <i class="far fa-calendar"></i>
+                        <span>15 Junio 2023</span>
+                    </div>
+                </div>
+                <div class="evento-contenido">
+                    <h3>El Futuro de la Inteligencia Artificial</h3>
+                    <p class="evento-descripcion">Descubre las últimas tendencias en IA y cómo transformarán diferentes industrias en los próximos años.</p>
+                    <div class="evento-detalles">
+                        <div class="detalle-item">
+                            <i class="far fa-clock"></i>
+                            <span>18:00 - 20:00 hrs</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-user"></i>
+                            <span>Dra. Ana López</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Aula Principal</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-evento">Registrarse</a>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="card-evento" data-categoria="taller">
+                <div class="evento-imagen">
+                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Taller de desarrollo web">
+                    <span class="evento-categoria">Taller</span>
+                    <div class="evento-fecha">
+                        <i class="far fa-calendar"></i>
+                        <span>22 Junio 2023</span>
+                    </div>
+                </div>
+                <div class="evento-contenido">
+                    <h3>Taller de Desarrollo Web con React</h3>
+                    <p class="evento-descripcion">Aprende a crear aplicaciones web modernas utilizando React y las últimas herramientas de desarrollo.</p>
+                    <div class="evento-detalles">
+                        <div class="detalle-item">
+                            <i class="far fa-clock"></i>
+                            <span>16:00 - 19:00 hrs</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-user"></i>
+                            <span>Ing. Carlos Ruiz</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Laboratorio 3</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-evento">Registrarse</a>
+                </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="card-evento" data-categoria="webinar">
+                <div class="evento-imagen">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Webinar de ciberseguridad">
+                    <span class="evento-categoria">Webinar</span>
+                    <div class="evento-fecha">
+                        <i class="far fa-calendar"></i>
+                        <span>28 Junio 2023</span>
+                    </div>
+                </div>
+                <div class="evento-contenido">
+                    <h3>Webinar: Ciberseguridad en la Era Digital</h3>
+                    <p class="evento-descripcion">Conoce las mejores prácticas para proteger tus datos y sistemas en un mundo cada vez más conectado.</p>
+                    <div class="evento-detalles">
+                        <div class="detalle-item">
+                            <i class="far fa-clock"></i>
+                            <span>19:00 - 21:00 hrs</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-user"></i>
+                            <span>Lic. Marcos Torres</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Online (Zoom)</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-evento">Registrarse</a>
+                </div>
+            </div>
+
+            <!-- Evento 4 -->
+            <div class="card-evento" data-categoria="charla">
+                <div class="evento-imagen">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Charla de diseño UX">
+                    <span class="evento-categoria">Charla</span>
+                    <div class="evento-fecha">
+                        <i class="far fa-calendar"></i>
+                        <span>5 Julio 2023</span>
+                    </div>
+                </div>
+                <div class="evento-contenido">
+                    <h3>Diseño UX: Más allá de la Estética</h3>
+                    <p class="evento-descripcion">Explora cómo el diseño centrado en el usuario puede mejorar la experiencia y la funcionalidad de tus proyectos.</p>
+                    <div class="evento-detalles">
+                        <div class="detalle-item">
+                            <i class="far fa-clock"></i>
+                            <span>17:00 - 19:00 hrs</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-user"></i>
+                            <span>Diseñadora Laura Méndez</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Aula Multimedia</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-evento">Registrarse</a>
+                </div>
+            </div>
+
+            <!-- Evento 5 -->
+            <div class="card-evento" data-categoria="taller">
+                <div class="evento-imagen">
+                    <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Taller de programación">
+                    <span class="evento-categoria">Taller</span>
+                    <div class="evento-fecha">
+                        <i class="far fa-calendar"></i>
+                        <span>12 Julio 2023</span>
+                    </div>
+                </div>
+                <div class="evento-contenido">
+                    <h3>Taller de Python para Principiantes</h3>
+                    <p class="evento-descripcion">Introducción práctica a la programación con Python, ideal para quienes quieren dar sus primeros pasos en código.</p>
+                    <div class="evento-detalles">
+                        <div class="detalle-item">
+                            <i class="far fa-clock"></i>
+                            <span>15:00 - 18:00 hrs</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-user"></i>
+                            <span>Prof. Roberto Vargas</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Laboratorio 2</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-evento">Registrarse</a>
+                </div>
+            </div>
+
+            <!-- Evento 6 -->
+            <div class="card-evento" data-categoria="webinar">
+                <div class="evento-imagen">
+                    <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Webinar de emprendimiento">
+                    <span class="evento-categoria">Webinar</span>
+                    <div class="evento-fecha">
+                        <i class="far fa-calendar"></i>
+                        <span>19 Julio 2023</span>
+                    </div>
+                </div>
+                <div class="evento-contenido">
+                    <h3>Webinar: Emprendimiento Tecnológico</h3>
+                    <p class="evento-descripcion">Aprende de expertos cómo convertir una idea tecnológica en un negocio exitoso en el mercado actual.</p>
+                    <div class="evento-detalles">
+                        <div class="detalle-item">
+                            <i class="far fa-clock"></i>
+                            <span>20:00 - 22:00 hrs</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-user"></i>
+                            <span>Emprendedor David Solís</span>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Online (YouTube Live)</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-evento">Registrarse</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SIMPLIFICADO -->
+    <footer class="footer-eventos">
+        <p>AulaNova Learning Center &copy; 2023 - Todos los derechos reservados</p>
+        <p class="footer-contacto">
+            <i class="fas fa-envelope"></i> eventos@aulanova.edu |
+            <i class="fas fa-phone"></i> +1 234 567 890
+        </p>
+    </footer>
+
+    <script src="eventos.js"></script>
+</body>
+
+</html>
